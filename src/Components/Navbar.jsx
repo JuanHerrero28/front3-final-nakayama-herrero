@@ -1,17 +1,35 @@
 import { Link, Outlet } from "react-router-dom";
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
-
+import { useContextGlobal } from "./utils/global.context";
+import "./Navbar.css";
 const Navbar = () => {
+  const { state, dispatch } = useContextGlobal();
+
   return (
     <>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/contacto">Contacto</Link>
-        <Link to="/detalle/:id">Detalle Odontologo</Link>
-        <Link to="/favs">Favoritos</Link>
-        {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-        <button>Change theme</button>
+      <nav className={state.theme ? "containerDark" : "containerLight"}>
+        <Link className="link-nav" to="/">
+          <span>Home</span>
+        </Link>
+        <Link className="link-nav" to="/contacto">
+          <span>Contacto</span>
+        </Link>
+        <Link className="link-nav" to="/favs">
+          <span>Favoritos</span>
+        </Link>
+        <button className="btn-change-mode" onClick={() => dispatch({ type: "CHANGE_MODE" })}>
+        {state.theme ? (
+          <>
+            Cambiar <span role="img" aria-label="Luz">💡</span>
+          </>
+        ) : (
+          <>
+            Cambiar <span role="img" aria-label="Luna">🌙</span>
+          </>
+        )}
+        </button>
+
       </nav>
+      
       <Outlet />
     </>
   );

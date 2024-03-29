@@ -1,0 +1,42 @@
+.containerDarkFoo {
+  background-color: #222222;
+  padding: 4rem;
+  text-align: center;
+}
+.containerLightFoo {
+  background-color: #ebedf0;
+  padding: 4rem;
+  text-align: center;
+}
+
+.parrafo-footer {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre las imágenes */
+}
+
+.logo {
+  width: 25%; /* Ajusta el ancho del logo según tus necesidades */
+}
+
+.icon {
+  width: 2%;
+  filter: brightness(0);
+}
+
+.containerDarkFoo .parrafo-footer {
+  color: #fff;
+}
+
+.containerDarkFoo .logo {
+  filter: brightness(20);
+}
+
+.containerDarkFoo .icon {
+  filter: brightness(20);
+}

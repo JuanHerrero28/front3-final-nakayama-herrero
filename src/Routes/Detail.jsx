@@ -1,11 +1,14 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useContextGlobal } from "../Components/utils/global.context";
+import "./Detail.css";
 
 const Detail = () => {
   const [data, setData] = useState(null);
   const { id } = useParams();
   const [cargando, setCargando] = useState(true);
+  const { state} = useContextGlobal();
 
   useEffect(() => {
     const fetchDentist = async () => {
@@ -29,14 +32,30 @@ const Detail = () => {
   return (
     <>
       {cargando ? (
-        <h2>Cargando..</h2>
+        <h2 className="loading-text">Cargando..</h2>
       ) : (
-        <div>
-          <h1>Detalle del dentista</h1>
-          <h3>Nombre: {data.name}</h3>
-          <h3>Email: {data.email}</h3>
-          <h3>Teléfono: {data.phone}</h3>
-          <h3>Sitio web: {data.website}</h3>
+        <div className={state.theme ? "containerDarkDetail" : "containerLightDetail"}>
+          <h1 className="detail-dentist">Detalle del dentista</h1>
+          <table className="detail-table">
+            <tbody>
+              <tr>
+                <td>Nombre:</td>
+                <td>{data.name}</td>
+              </tr>
+              <tr>
+                <td>Email:</td>
+                <td>{data.email}</td>
+              </tr>
+              <tr>
+                <td>Teléfono:</td>
+                <td>{data.phone}</td>
+              </tr>
+              <tr>
+                <td>Sitio web:</td>
+                <td>{data.website}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       )}
     </>
@@ -44,6 +63,8 @@ const Detail = () => {
 };
 
 export default Detail;
+
+
 
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context

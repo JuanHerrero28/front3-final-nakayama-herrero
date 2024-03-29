@@ -1,3 +1,4 @@
+import { useContextGlobal } from "./utils/global.context";
 import { useState } from "react";
 import './Form.css'
 
@@ -7,6 +8,7 @@ const Form = () => {
   const [email, setEmail] = useState("");
   const [err, setErr] = useState(false);
   const [show, setShow] = useState(false);
+  const { state } = useContextGlobal();
 
 
   const handleSubmit = (e) => {
@@ -29,8 +31,10 @@ const Form = () => {
   };
 
   return (
+    <div className={state.theme ? "containerDark-form" : "containerLight-form"}>
+
+    <h1 className="title-form">Contacto</h1>
     <div className="form-container">
-     <h1>Contacto</h1>
       {show ? null :
         <form onSubmit={handleSubmit}>
           <label>Nombre:</label>
@@ -43,18 +47,19 @@ const Form = () => {
             type="email"
             onChange={(e) => setEmail(e.target.value)}
           ></input>
-          <button>Enviar</button>
+          <button className="btn-form">Enviar</button>
         </form>
       }
       {show ?
       <>
-       <p>Gracias {nombre}, te contactaremos cuanto antes vía mail</p>
+       <p className="paragraph">Gracias {nombre}, te contactaremos cuanto antes vía mail</p>
       </>
-      : <h4>Coloque los datos para enviar el formulario</h4>
+      : <h4> ¡ Coloque los datos para enviar el formulario ! 😊</h4>
       }
       {err ? (
         <p className="err-form">Por favor verifique su información nuevamente</p>
       ) : null}
+    </div>
     </div>
   );
 };

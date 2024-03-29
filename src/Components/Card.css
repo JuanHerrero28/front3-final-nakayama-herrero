@@ -1,0 +1,84 @@
+.card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    transition: box-shadow 0.5s ease; /* Agregar una transición para un cambio suave */
+    box-shadow: 0 0 0 2px transparent; /* Establecer un borde transparente inicialmente */
+}
+
+.card:hover {
+    box-shadow: 0 0 0 2.4px #a2d5f5a1; /* Ajustar el tamaño y el color del borde cuando se pasa el mouse */
+}
+
+.link-to-detail {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .image-card {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+
+  
+  .favButton {
+    background-color: #a2dcf3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .favButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+
+  .title-card{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  
+  .card-cont{
+    font-size: 1rem;
+    font-weight: 200;
+  }
+
+  .card {
+    opacity: 0; /* Comienza con opacidad 0 para el efecto de fade-in */
+    transition: opacity 0.5s ease-in-out; /* Transición suave de la opacidad */
+  }
+  
+  .card.fade-in {
+    opacity: 1; /* Cambia la opacidad a 1 para mostrar la tarjeta */
+  }
+
+  .star {
+    font-size: 1.2rem;
+  }
+
+  .added {
+    font-size: 1.2rem;
+    font-weight: 200;
+  }
+
+  .btn-re-fav {
+    font-size: 1.2rem;
+    font-weight: 200;
+    background-color: #f3aea2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+

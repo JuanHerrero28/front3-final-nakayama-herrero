@@ -1,0 +1,48 @@
+.detail-dentist {
+  text-align: center;
+  padding: 3rem;
+  font-size: 3rem;
+  font-weight: 200;
+  margin-bottom: 2rem;
+  animation: aparecer 1s ease forwards;
+}
+
+.detail-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.detail-table td {
+  padding: 2rem;
+  border: 1px solid #a2d5f5a1;
+  font-size: 1.5rem;
+  font-weight: 200;
+  animation: aparecer 1s ease forwards;
+}
+
+.detail-table td:first-child {
+  font-weight: bold;
+  background-color: #f5b6b6;
+  font-size: 1.5rem;
+  font-weight: 200;
+  animation: aparecer 1s ease forwards;
+}
+
+.detail-table tr:hover {
+  background-color: #a2d5f5a1;
+}
+
+.containerDarkDetail {
+  background-color: #5c5c5c;
+}
+
+.containerDarkDetail .detail-table td {
+  color: #fff;
+}
+.containerDarkDetail .detail-table td:first-child {
+  background-color: #3b495a;
+}
+
+.containerDarkDetail .detail-dentist {
+  color: #fff;
+}

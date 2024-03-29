@@ -1,0 +1,61 @@
+
+.containerDark {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem;
+  background-color: #222222;
+}
+
+.containerLight {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem;
+  background-color: #ebedf0;
+}
+
+.link-nav {
+  position: relative;
+  text-decoration: none;
+  color: #000; /* Color del texto */
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+.link-nav::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px; /* Grosor de la línea */
+  background-color: #000; /* Color de la línea */
+  transition: width 0.3s ease; /* Transición de la línea */
+}
+
+.link-nav:hover::before {
+  width: 100%; /* Ancho completo al pasar el cursor */
+}
+
+.link-nav span {
+  color: #000000c7;
+  font-size: 1.7rem;
+  font-weight: 200;
+}
+
+.btn-change-mode {
+  background-color: #ffffff;
+  border: 0.5px solid #787a79fa;
+  cursor: pointer;
+  font-weight: 200;
+  padding: 1rem;
+  border-radius: 3rem;
+}
+
+.containerDark .link-nav span {
+  color: #fff; /* Cambia el color del texto a blanco en modo oscuro */
+}
+
+.containerDark .link-nav::before {
+  background-color: #fff; /* Cambia el color de la línea a blanco en modo oscuro */
+}

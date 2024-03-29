@@ -1,0 +1,27 @@
+.title-home {
+    text-align: center;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 200;
+    animation: aparecer 1s ease forwards;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); /* se expanden para llenar el espacio disponible */
+    padding: 4rem;
+    gap: 3rem; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centrar las tarjetas en el contenedor */
+  }
+
+  .containerDark-home{
+    background-color: #5c5c5c;
+  }
+
+  .containerDark-home .title-home {
+    color: #fff;
+  }
+
+  
+  
+  

@@ -1,0 +1,44 @@
+@keyframes aparecer {
+    0% {
+      opacity: 0; /* El texto está completamente transparente al inicio */
+    }
+    100% {
+      opacity: 1; /* El texto es completamente visible al final */
+    }
+  }
+  
+  /* Aplicar la animación al texto */
+  .contact-description {
+    animation: aparecer 1s ease forwards;
+  }
+
+
+  .containerLightContact {
+  width: 100%;
+  margin: 0 auto;
+  padding: 5rem;
+  background-color: #a2dcf3; /* Color de fondo */
+}
+
+.containerDarkContact {
+  width: 100%;
+  margin: 0 auto;
+  padding: 5rem;
+  background-color: #f5b6b6;
+}
+
+.contact-title {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 3rem;
+  font-weight: 200;
+  animation: aparecer 1s ease forwards;
+}
+
+.contact-description {
+  color: #666; /* Color del texto */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 200;
+}

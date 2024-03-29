@@ -1,0 +1,34 @@
+.title-favs {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 200;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    animation: aparecer 1s ease forwards;
+  }
+
+
+  .btn-clean {
+    font-size: 1.3rem;
+    font-weight: 200;
+    background-color: #a2dcf3;
+    color: white;
+    border: none;
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+
+  .btn-clean:hover {
+    background-color: #c1cfd4;
+  }
+
+  .container-btn {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+  }
+
+  .containerDark-home .title-favs {
+    color: #fff;
+  }
